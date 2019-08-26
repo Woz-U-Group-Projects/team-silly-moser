@@ -1,5 +1,6 @@
 import React from "react";
 import axios from "axios";
+import CreateProject from "./components/createProject/createProject";
 
 class Project extends React.Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class Project extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3000/projects")
+      .get("http://localhost:3001/projects")
       .then(response => this.setState({ projects: response.data }));
   }
 
@@ -21,6 +22,7 @@ class Project extends React.Component {
             {p.id} : {p.name} : {p.createdBy}
           </div>
         ))}
+        
       </div>
     );
   }
