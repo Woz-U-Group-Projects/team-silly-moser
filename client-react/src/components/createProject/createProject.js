@@ -91,7 +91,7 @@ export class CreateProject extends Component {
 
     render() {
         return (
-            <div><h3>List of Projects</h3>
+            <div><h3>Create a Project</h3>
               <form className="ok" onSubmit={this.onSubmit}>
               <br></br>
               {/* <label><strong>User:</strong> </label>
