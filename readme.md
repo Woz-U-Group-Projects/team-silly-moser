@@ -28,13 +28,9 @@ Initial features:
 3. Calendar
    a. Day/Month/Year View of Tasks (user can see an overview of scheduled
    tasks)
-4. Notifications of important events
-   a. Starred Events (users star important events and will be reminded
-   leading up to scheduled events and all changes to that event)
-   b. New tasks (users will be alerted of new tasks when formed)
-5. Search
+4. Search
    a. Find Specific Events (Users find specific event details through search)
-6. Customer Service
+5. Customer Service
    a. Customer Support (users reports any problems with application)(admin
    addresses problems reported by users)
 
