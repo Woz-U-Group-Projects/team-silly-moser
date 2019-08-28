@@ -1,0 +1,24 @@
+{
+  "name": "team-silly-moser",
+  "version": "1.0.0",
+  "description": "Application Name: **Schedule Master**",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.0",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "delv": " concurrently npm start --prefix /server-express-mongodb/server.js && npm start --prefix /server-express-mongodb/app.js &&  npm start --prefix /client-react/npm start",
+    "dev": "concurrently \"cd server-express-mongodb && nodemon server.js\" \"cd server-express-mongodb && npm start\" \"cd./client-react && npm start\""
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Woz-U-Group-Projects/team-silly-moser/issues"
+  },
+  "homepage": "https://github.com/Woz-U-Group-Projects/team-silly-moser#readme"
+}

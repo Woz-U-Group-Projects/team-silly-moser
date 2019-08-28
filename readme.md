@@ -50,3 +50,4 @@ Stretch Goals:
 - Many to Many relationship: Include all group members and friends list to each
   account and track interactions between them.
 - Use JWT tokens to sign up and sign in users
+"# Finalproject-Boilerplate" 

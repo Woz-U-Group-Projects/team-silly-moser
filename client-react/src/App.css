@@ -1,0 +1,33 @@
+/* #root{background-color: lightblue;
+    height: 100%;} */
+
+    html, body, #app, #app>div {
+        height: 100%;
+        background-color: lightblue;
+      }
+
+ul {
+    list-style: none;
+    padding: 0px;
+    width: 30%;
+    margin: auto;
+}
+
+li {
+    font-size: 1.3rem;
+    line-height: 2rem;
+    border-bottom: 1px dotted #777;
+    
+}
+
+.nav 
+    {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        /* font-size: 2rem; */
+    }
+
+    .nav a:hover {
+        color:red;
+    }

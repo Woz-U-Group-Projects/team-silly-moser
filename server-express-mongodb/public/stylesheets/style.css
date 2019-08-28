@@ -1,8 +1,26 @@
+* {margin-top: 1em;
+}
+
+th {font-weight: 900;}
+
 body {
+  text-align: center;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  /* background-image: -webkit-linear-gradient(purple, green, teal );*/
+  
 }
 
 a {
   color: #00B7FF;
 }
+
+table.center {
+  margin-left:auto; 
+  margin-right:auto;
+  text-align: left;
+}
+
+.txt {font-weight: 900;
+}
+
