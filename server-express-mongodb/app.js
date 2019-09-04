@@ -6,13 +6,16 @@ var logger = require("morgan");
 // var cors = require("cors");
 var mongoose = require("mongoose");
 
+// const userSchema = require('./models/userSchemaOG')
+// const User = mongoose.model('user', userSchema, 'user')
+
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 var projectsRouter = require("./routes/projects");
 
 var app = express();
 
-//hbs view engine setup
+// hbs view engine setup
 
 app.engine('.hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
@@ -39,4 +42,5 @@ db.on("connected", () => console.log(`Mongoose connection open to ${mongoDB}`));
 db.on("disconnected", () => console.log("Mongoose connection disconnected"));
 db.on("error", console.error.bind(console, "Mongoose connection error:"));
 console.log('serving on port 3001 -Leif');
+
 module.exports = app;

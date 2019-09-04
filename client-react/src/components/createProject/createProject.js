@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './createProject.css';
-import axios from 'axios';
+
+
 export class CreateProject extends Component {
   constructor(props){
     super(props);
@@ -15,25 +16,26 @@ export class CreateProject extends Component {
           project_title: '',
           project_description: '',
           project_completed: false,
-          allProjects: []
+          
     }
   }
 
-  // componentDidMount() {
-  //   axios.get('http://localhost:3001/projects/')
-  //     .then(response => {
-  //       if (response.data.length > 0) {
-  //         this.setState({
-  //           allProjects: response.data.map(project => users.username),
-  //           username: response.data[0].username
-  //         })
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     })
-  //   }
+  componentDidMount() {
+    // axios.post('http://localhost:3001/projects/')
+    //   .then(response => {
+    //     if (response.data.length > 0) {
+    //       this.setState({
+    //         allProjects: response.data.push(project => project),
+    //         username: response.data[0].username
+    //       })
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
+    }
 
+  
     onChangeUsername(e) {
       this.setState({
         username: e.target.value
@@ -68,15 +70,59 @@ export class CreateProject extends Component {
       console.log(`Project title: ${this.state.project_title} `);
       alert(`Project ${this.state.project_title} created!`);
 
-      const thisProject  = {
-        username: this.state.username,
-        project_description: this.state.project_description,
-        project_title: this.state.project_title,
-        createdBy: this.state.createdBy
-      }
+      // const thisProject  = {
+      //   name: this.state.name,
+      //   createdBy: this.state.createdBy
+      // }
 
-      axios.post('http://localhost:3001/projects/add', thisProject)
-      .then(res => console.log(res.data));
+      // const {
+      //    name
+      //    createdBy: this.state.createdBy
+      // } = this.state;
+
+      // fetch('/api/projects/', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json'
+      //   },
+      //   body: JSON.stringify({
+      //     name: signUpEmail,
+      //     password: signUpPassword,
+      //   }),
+      // }).then(res => res.json())
+      //   .then(json => {
+      //     console.log('json', json);
+      //     if (json.success) {
+      //       this.setState({
+      //         signUpError: json.message,
+      //         isLoading: false,
+      //         signUpEmail: '',
+      //         signUpPassword: '',
+      //       });
+      //     } else {
+      //       this.setState({
+      //         signUpError: json.message,
+      //         isLoading: false,
+      //       });
+      //     }
+      //   });
+
+      
+
+
+      // axios.post('http://localhost:3001/projects/')
+      // .then(response => {
+      //   if (response.data.length > 0) {
+      //     this.setState({
+      //       allProjects: response.data.push(project => project),
+      //       username: response.data[0].username
+      //     })
+      //   }
+      // })
+      // .catch((error) => {
+      //   console.log(error);
+      // })
+    
 
       
       // this.setState({

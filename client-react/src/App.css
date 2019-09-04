@@ -31,3 +31,22 @@ li {
     .nav a:hover {
         color:red;
     }
+
+    .registerAction {
+        font-size: 1.4em;
+        color: indigo;
+        text-decoration: underline;
+
+    }
+    .ok {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .form-control {
+        max-width: 30%;
+        margin: 10px auto;
+        margin-bottom: 20px;
+        
+    }

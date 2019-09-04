@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import CreateProject from "./components/createProject/createProject";
 
 class Project extends React.Component {
   constructor(props) {
