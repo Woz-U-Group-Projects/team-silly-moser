@@ -21,18 +21,7 @@ export class CreateProject extends Component {
   }
 
   componentDidMount() {
-    // axios.post('http://localhost:3001/projects/')
-    //   .then(response => {
-    //     if (response.data.length > 0) {
-    //       this.setState({
-    //         allProjects: response.data.push(project => project),
-    //         username: response.data[0].username
-    //       })
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   })
+   
     }
 
   
@@ -79,6 +68,19 @@ export class CreateProject extends Component {
       //    name
       //    createdBy: this.state.createdBy
       // } = this.state;
+
+       // axios.post('http://localhost:3001/projects/')
+    //   .then(response => {
+    //     if (response.data.length > 0) {
+    //       this.setState({
+    //         allProjects: response.data.push(project => project),
+    //         username: response.data[0].username
+    //       })
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   })
 
       // fetch('/api/projects/', {
       //   method: 'POST',

@@ -78,7 +78,7 @@ function App() {
         <Route path='/projects' exact component={ProjectList} />
         <Route path='/create' exact component={CreateProject} />
         <Route path='/delete' exact component={DeleteProject} />
-        <Route path='/update/:id' exact component={UpdateProject} />
+        <Route path='/update/' exact component={UpdateProject} />
         {/* <Route path="/user" exact component={CreateUser} />  */}
         <Route path="/userList" exact component={Users} />
         {/* <Route path='/Posts' exact component={Posts} /> */}

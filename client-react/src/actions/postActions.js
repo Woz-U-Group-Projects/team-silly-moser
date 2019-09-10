@@ -27,3 +27,25 @@ export const createPost = postData => dispatch => {
       })
     );
 };
+
+
+export function updateBlogPost(id, data) {
+  return fetch('http://api.symfony-3.dev/app_dev.php/posts/' + id, {
+      method: 'PUT',
+      mode: 'CORS',
+      body: JSON.stringify(data),
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  }).then(res => {
+      return res;
+  }).catch(err => err);
+}
+
+export function fetchBlogPost(id) {
+  return fetch('http://api.symfony-3.dev/app_dev.php/posts/' + id, {
+      method: 'GET',
+      mode: 'CORS'
+  }).then(res => res.json())
+  .catch(err => err);
+}
