@@ -86,8 +86,10 @@ export class CreateProject extends Component {
       //   method: 'POST',
       //   headers: {
       //     'Content-Type': 'application/json'
+      //      "Authorization":"Bearer " + localStorage.get("jwt")
       //   },
       //   body: JSON.stringify({
+        // project inforation
       //     name: signUpEmail,
       //     password: signUpPassword,
       //   }),

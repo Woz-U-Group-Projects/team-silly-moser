@@ -10,7 +10,7 @@ const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 
 // Load User model
-const User = require("../../models/User");
+const User = require("../../models/Users");
 
 // @route POST api/users/register
 // @desc Register user
@@ -67,11 +67,13 @@ router.post("/login", (req, res) => {
   const password = req.body.password;
 
   // Find user by email
-  User.findOne({ email }).then(user => {
+  User.findOne({email: email }).then(user => {
     // Check if user exists
     if (!user) {
       return res.status(404).json({ emailnotfound: "Email not found" });
     }
+
+    console.log(user);
 
     // Check password
     bcrypt.compare(password, user.password).then(isMatch => {
@@ -102,7 +104,7 @@ router.post("/login", (req, res) => {
           .status(400)
           .json({ passwordincorrect: "Password incorrect" });
       }
-    });
+    }).catch(err => console.log(err));
   });
 });
 

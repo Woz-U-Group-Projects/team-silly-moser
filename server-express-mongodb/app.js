@@ -5,15 +5,23 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 // var cors = require("cors");
 var mongoose = require("mongoose");
+const passport = require("passport");
 
 // const userSchema = require('./models/userSchemaOG')
 // const User = mongoose.model('user', userSchema, 'user')
 
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+var usersRouter = require("./routes/api/users");
 var projectsRouter = require("./routes/projects");
 
 var app = express();
+
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport config
+require("./config/passport")(passport);
 
 // hbs view engine setup
 
@@ -31,6 +39,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
 app.use("/projects", projectsRouter);
+
+app._router.stack.forEach(r => {if(r.route && r.route.path) {console.log(r.route.path)} });
 
 var mongoDB =
   "mongodb+srv://dbuser:dbuser@mycluster-erllz.mongodb.net/test?retryWrites=true&w=majority";

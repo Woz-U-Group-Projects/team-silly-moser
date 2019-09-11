@@ -59,12 +59,14 @@ function App() {
     <Project />
 
     <Router>
+
       <nav className="nav navbar navbar-expand-lg  bg-light">
         <Link to="/" className="navbar-brand">Home</Link>
         <Link to="projects" className="navbar-brand">List of Projects</Link>
         <Link to="/create" className="navbar-brand">Create Project</Link>
         <Link to="/update/:id" className="navbar-brand">Update Project</Link>
         <Link to="/delete" className="navbar-brand">Delete Project</Link>
+
         {/* <Link to="/user" className="navbar-brand" component={CreateUser}>Create User </Link> */}
 
         <Link to="/userList" className="navbar-brand" component={Users}>Users</Link>

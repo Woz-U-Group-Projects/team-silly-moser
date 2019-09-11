@@ -48,45 +48,48 @@ const express = require("express");
 const router = express.Router();
 const passport = require("passport");
 
-const Project = require("../models/project");
+ const Project = require("../models/project");
+const Users = require("../models/Users");
 
 // @route GET api/projects
 // @desc Get all projects for a specific user
 // @access Private
-router.get(
-  "/",
-  passport.authenticate("jwt", { session: false }),
-  async (req, res) => {
-    let projectsArr = [];
+// router.get(
+//   "/",
+//   passport.authenticate("jwt", { session: false }),
+//   async (req, res) => {
 
-    // Member projects
-    await Project.find({})
-      .then(projects => {
-        projects.map(project => {
-          project.teamMembers.map(member => {
-            if (member.email == req.user.email) {
-              projectsArr.push(project);
-            }
-          });
-        });
-      })
-      .catch(err => console.log(err));
 
-    const OWNER = {
-      id: req.user.id,
-      name: req.user.name,
-      email: req.user.email
-    };
+//     let projectsArr = [];
 
-    // Combine with owner projects
-    await Project.find({ owner: OWNER })
-      .then(projects => {
-        let finalArr = [...projects, ...projectsArr];
-        res.json(finalArr);
-      })
-      .catch(err => console.log(err));
-  }
-);
+//     // Member projects
+//     await Project.find({})
+//       .then(projects => {
+//         projects.map(project => {
+//           project.teamMembers.map(member => {
+//             if (member.email == req.user.email) {
+//               projectsArr.push(project);
+//             }
+//           });
+//         });
+//       })
+//       .catch(err => console.log(err));
+
+//     const OWNER = {
+//       id: req.user.id,
+//       name: req.user.name,
+//       email: req.user.email
+//     };
+
+//     // Combine with owner projects
+//     await Project.find({ owner: OWNER })
+//       .then(projects => {
+//         let finalArr = [...projects, ...projectsArr];
+//         res.json(finalArr);
+//       })
+//       .catch(err => console.log(err));
+//   }
+// );
 
 // @route GET api/projects/:id
 // @desc Get specific project by id
@@ -108,22 +111,62 @@ router.get(
 router.post(
   "/create",
   passport.authenticate("jwt", { session: false }),
-  async (req, res) => {
-    const OWNER = {
-      id: req.user.id,
-      name: req.user.name,
-      email: req.user.email
-    };
+  (req, res) => {
+    console.log(req.user.id);
+    Users.findOne({_id:req.user.id}).then((foundUser) => {
+      if(foundUser) {
+      console.log(foundUser);
+      // foundUser is user object
+      // read the UserProjects, filter out the one to be updated, update it, and re-add it
+      foundUser.UserProjects = [...foundUser.UserProjects, {name: req.body.projectName, teamMembers: req.body.members }]
+      foundUser.save().then(result => res.json(result));
+      } else {
+        res.json({message:"Error"});
+      }
+    });
+    
+  }
+  );
 
-    const NEW_PROJECT = await new Project({
-      owner: OWNER,
-      name: req.body.projectName,
-      teamMembers: req.body.members
+
+
+
+
+    // const OWNER = {
+    //   id: req.user.id,
+    //   name: req.user.name,
+    //   email: req.user.email
+    // };
+
+    // const NEW_PROJECT = await new Project({
+    //   owner: OWNER,
+    //   name: req.body.projectName,
+    //   teamMembers: req.body.members
+    // });
+
+    // NEW_PROJECT.save().then(project => res.json(project));
+
+/// LEIF AMMON
+
+router.get(
+  "/projectList/list",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    console.log(req.user.id);
+    Users.findOne({_id:req.user.id}).then((foundUser) => {
+      if(foundUser) {
+      console.log(foundUser);
+      // foundUser is user object
+      // read the UserProjects, filter out the one to be updated, update it, and re-add it
+      res.json(foundUser.UserProjects );
+      } else {
+        res.json({message:"Error"});
+      }
     });
 
-    NEW_PROJECT.save().then(project => res.json(project));
   }
-);
+  );
+
 
 // @route PATCH api/projects/update
 // @desc Update an existing project
