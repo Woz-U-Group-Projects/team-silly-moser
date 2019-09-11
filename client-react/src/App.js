@@ -29,6 +29,7 @@ import PostForm from './components/Postform';
   import ProjectList from './components/projectList/projectList';
   import CreateUser from "./components/createUser/createUser";
   import Users from './components/Users/users';
+  import Calendar from './components/calendar/calendar';
   
   if (localStorage.jwtToken) {
     // Set auth token header auth
@@ -66,6 +67,7 @@ function App() {
         <Link to="/create" className="navbar-brand">Create Project</Link>
         <Link to="/update/:id" className="navbar-brand">Update Project</Link>
         <Link to="/delete" className="navbar-brand">Delete Project</Link>
+        <Link to="/calendar" className="navbar-brand">Calendar</Link>
 
         {/* <Link to="/user" className="navbar-brand" component={CreateUser}>Create User </Link> */}
 
@@ -81,6 +83,7 @@ function App() {
         <Route path='/create' exact component={CreateProject} />
         <Route path='/delete' exact component={DeleteProject} />
         <Route path='/update/' exact component={UpdateProject} />
+        <Route path='/calendar' exact component={Calendar} />
         {/* <Route path="/user" exact component={CreateUser} />  */}
         <Route path="/userList" exact component={Users} />
         {/* <Route path='/Posts' exact component={Posts} /> */}
