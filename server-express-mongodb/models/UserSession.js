@@ -1,10 +1,19 @@
 const mongoose = require('mongoose');
 
 const UserSessionSchema = new mongoose.Schema({
-  count: {
+  userId: {
     type: Number,
-    default: 0
+    default: -1
+  },
+  timestamp: {
+    type: Date,
+    default: Date.now()
+  },
+  isDeleted: {
+    type: Boolean,
+    default: false
   }
+
 });
 
 
