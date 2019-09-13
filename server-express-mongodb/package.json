@@ -12,8 +12,6 @@
     "cors": "^2.8.5",
     "debug": "~2.6.9",
     "express": "^4.16.4",
-    "express-handlebars": "^3.1.0",
-    "handlebars": "^4.1.2",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.3.2",

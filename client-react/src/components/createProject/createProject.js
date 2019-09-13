@@ -1,75 +1,81 @@
-import React, { Component } from 'react'
-import './createProject.css';
-
+import React, { Component } from "react";
+import "./createProject.css";
+import axios from "axios";
 
 export class CreateProject extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.onChangeProjectName = this.onChangeProjectName.bind(this);
-    this.onChangeProjectDescription = this.onChangeProjectDescription.bind(this);
+    this.onChangeProjectDescription = this.onChangeProjectDescription.bind(
+      this
+    );
     this.onProjectCompleted = this.onProjectCompleted.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
 
     this.state = {
-          username: '',
-          project_title: '',
-          project_description: '',
-          project_completed: false,
-          
-    }
+      username: "",
+      project_title: "",
+      project_description: "",
+      project_completed: false
+    };
   }
 
-  componentDidMount() {
-   
-    }
+  componentDidMount() {}
 
-  
-    onChangeUsername(e) {
-      this.setState({
-        username: e.target.value
-      })
-    }
+  onChangeUsername(e) {
+    this.setState({
+      username: e.target.value
+    });
+  }
 
-    onChangeProjectName(e) {
+  onChangeProjectName(e) {
+    this.setState({
+      project_title: e.target.value
+    });
+  }
 
-      this.setState({
-        project_title: e.target.value
-      });
-    }
-      
-    onChangeProjectDescription(e) {
+  onChangeProjectDescription(e) {
+    this.setState({
+      project_description: e.target.value
+    });
+  }
+  onProjectCompleted(e) {
+    this.setState({
+      project_completed: e.target.value
+    });
+  }
 
-      this.setState({
-        project_description: e.target.value
-      });
-    }
-    onProjectCompleted(e) {
+  onSubmit(e) {
+    e.preventDefault();
 
-      this.setState({
-        project_completed: e.target.value
-      });
-    }
+    axios
+      .post(
+        "http://localhost:3001/projects/create",
+        { projectName: this.state.project_title },
+        {
+          headers: {
+            Authorization: localStorage.getItem("jwtToken")
+          }
+        }
+      )
+      .then(result => console.log(result));
 
+    //console.log("form sent!");
+    //console.log(`Project title: ${this.state.project_title} `);
+    //alert(`Project ${this.state.project_title} created!`);
 
-    onSubmit(e) {
-      e.preventDefault();
+    // const thisProject  = {
+    //   name: this.state.name,
+    //   createdBy: this.state.createdBy
+    // }
 
-      console.log('form sent!');
-      console.log(`Project title: ${this.state.project_title} `);
-      alert(`Project ${this.state.project_title} created!`);
+    // const {
+    //    name
+    //    createdBy: this.state.createdBy
+    // } = this.state;
 
-      // const thisProject  = {
-      //   name: this.state.name,
-      //   createdBy: this.state.createdBy
-      // }
-
-      // const {
-      //    name
-      //    createdBy: this.state.createdBy
-      // } = this.state;
-
-       // axios.post('http://localhost:3001/projects/')
+    // axios.post('http://localhost:3001/projects/')
     //   .then(response => {
     //     if (response.data.length > 0) {
     //       this.setState({
@@ -82,69 +88,64 @@ export class CreateProject extends Component {
     //     console.log(error);
     //   })
 
-      // fetch('/api/projects/', {
-      //   method: 'POST',
-      //   headers: {
-      //     'Content-Type': 'application/json'
-      //      "Authorization":"Bearer " + localStorage.get("jwt")
-      //   },
-      //   body: JSON.stringify({
-        // project inforation
-      //     name: signUpEmail,
-      //     password: signUpPassword,
-      //   }),
-      // }).then(res => res.json())
-      //   .then(json => {
-      //     console.log('json', json);
-      //     if (json.success) {
-      //       this.setState({
-      //         signUpError: json.message,
-      //         isLoading: false,
-      //         signUpEmail: '',
-      //         signUpPassword: '',
-      //       });
-      //     } else {
-      //       this.setState({
-      //         signUpError: json.message,
-      //         isLoading: false,
-      //       });
-      //     }
-      //   });
+    // fetch('/api/projects/', {
+    //   method: 'POST',
+    //   headers: {
+    //     'Content-Type': 'application/json'
+    //      "Authorization":"Bearer " + localStorage.get("jwt")
+    //   },
+    //   body: JSON.stringify({
+    // project inforation
+    //     name: signUpEmail,
+    //     password: signUpPassword,
+    //   }),
+    // }).then(res => res.json())
+    //   .then(json => {
+    //     console.log('json', json);
+    //     if (json.success) {
+    //       this.setState({
+    //         signUpError: json.message,
+    //         isLoading: false,
+    //         signUpEmail: '',
+    //         signUpPassword: '',
+    //       });
+    //     } else {
+    //       this.setState({
+    //         signUpError: json.message,
+    //         isLoading: false,
+    //       });
+    //     }
+    //   });
 
-      
+    // axios.post('http://localhost:3001/projects/')
+    // .then(response => {
+    //   if (response.data.length > 0) {
+    //     this.setState({
+    //       allProjects: response.data.push(project => project),
+    //       username: response.data[0].username
+    //     })
+    //   }
+    // })
+    // .catch((error) => {
+    //   console.log(error);
+    // })
 
+    // this.setState({
 
-      // axios.post('http://localhost:3001/projects/')
-      // .then(response => {
-      //   if (response.data.length > 0) {
-      //     this.setState({
-      //       allProjects: response.data.push(project => project),
-      //       username: response.data[0].username
-      //     })
-      //   }
-      // })
-      // .catch((error) => {
-      //   console.log(error);
-      // })
-    
+    //   project_title: '',
+    //     project_description: '',
+    //     createdBy: '',
 
-      
-      // this.setState({
+    // })
+  }
 
-      //   project_title: '',
-      //     project_description: '',
-      //     createdBy: '',
-
-      // })
-
-    }
-
-    render() {
-        return (
-            <div><h3>Create a Project</h3>
-              <form className="ok" onSubmit={this.onSubmit}>
-              <br></br>
-              {/* <label><strong>User:</strong> </label>
+  render() {
+    return (
+      <div>
+        <h3>Create a Project</h3>
+        <form className="ok" onSubmit={this.onSubmit}>
+          <br></br>
+          {/* <label><strong>User:</strong> </label>
           <select ref="userInput"
               // required
               className="form-control"
@@ -159,26 +160,39 @@ export class CreateProject extends Component {
                 })
               }
           </select> */}
-            <label>
-              Name of Project:  <br></br>
-              <input type="text" value={this.state.project_title} onChange={this.onChangeProjectName} /> 
-            </label>
-            <br></br><br></br>
-            <label>
-              Description:  <br></br>
-              <input type="text" value={this.state.project_description} onChange={this.onChangeProjectDescription} />
-            </label>
-            {/* <label>
+          <label>
+            Name of Project: <br></br>
+            <input
+              type="text"
+              value={this.state.project_title}
+              onChange={this.onChangeProjectName}
+            />
+          </label>
+          <br></br>
+          <br></br>
+          <label>
+            Description: <br></br>
+            <input
+              type="text"
+              value={this.state.project_description}
+              onChange={this.onChangeProjectDescription}
+            />
+          </label>
+          {/* <label>
              Completed: 
               <input type="radio" value={this.state.project_description} onChange={this.onChangeProjectDescription} />
-            </label> */}<br></br><br></br>
-            <input type="submit" value="Submit" />
-          </form>
+            </label> */}
+          <br></br>
+          <br></br>
+          <input type="submit" value="Submit" />
+        </form>
 
-          {this.state.project_title}<br></br>
-          {this.state.project_description}</div>
-          );
-    }
+        {this.state.project_title}
+        <br></br>
+        {this.state.project_description}
+      </div>
+    );
+  }
 }
 
-export default CreateProject
+export default CreateProject;
