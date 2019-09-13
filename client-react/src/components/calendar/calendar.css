@@ -1,4 +1,4 @@
-html,
+/* html,
 body {
   height: 100%;
 }
@@ -31,10 +31,11 @@ body {
 .Sample__container > * > * {
   margin: 10px;
 }
+*/
 .Sample__container__content {
   display: flex;
   max-width: 100%;
-  flex-basis: 420px;
+  flex-basis: 25%;
   flex-direction: column;
   flex-grow: 100;
   align-items: stretch;
@@ -46,4 +47,4 @@ body {
 
 .react-calendar {
   box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
-}
+} 

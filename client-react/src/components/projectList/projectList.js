@@ -11,7 +11,7 @@ export class ProjectList extends Component {
         };
     
     componentDidMount(){
-    fetch('/projects/projectlist/list')
+    fetch('api/projects/')
     .then(res => res.json()).then(projects => this.setState({projects}, () => console.log('peeps fetched!', projects)));
     
     };
