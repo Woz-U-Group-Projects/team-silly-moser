@@ -9,7 +9,7 @@ class Project extends React.Component {
 
   componentDidMount() {
     axios
-      .get("http://localhost:3000/projects")
+      .get("http://localhost:3001/projects")
       .then(response => this.setState({ projects: response.data }));
   }
 
@@ -21,6 +21,7 @@ class Project extends React.Component {
             {p.id} : {p.name} : {p.createdBy}
           </div>
         ))}
+        
       </div>
     );
   }
