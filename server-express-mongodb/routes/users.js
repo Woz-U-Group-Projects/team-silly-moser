@@ -51,4 +51,27 @@ router.put("/:id", function(req, res, next) {
   );
 });
 
+//router.delete('./users/:id', (req, res, next) => {
+ // let userId = req.params.id;
+ // UserModel.users.destroy({
+  //  where: {user_id: actorId}
+ // }).then(result => res.redirect('/')).catch(err =>{
+  //  res.status(400);
+  //  res.send('Issue please try again');
+ // })
+//})
+router.delete("/:id", function(req, res, next) {
+  if (req.user && req.user.Admin) {
+    let userId = parseInt(req.params.id);
+    models.users
+      .update({ Deleted: true }, { where: { UserId: userId } })
+      .then(result => res.redirect("/users"))
+      .catch(error => {
+        res.status(400);
+        res.send("error deleting user");
+      });
+  } else {
+    res.redirect("unauthorized");
+  }
+});
 module.exports = router;

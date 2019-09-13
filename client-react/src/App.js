@@ -30,6 +30,7 @@ import PostForm from './components/Postform';
   import CreateUser from "./components/createUser/createUser";
   import Users from './components/Users/users';
   import Calendar from './components/calendar/calendar';
+  import deleteusers from './components/Users/deleteusers';
   
   if (localStorage.jwtToken) {
     // Set auth token header auth

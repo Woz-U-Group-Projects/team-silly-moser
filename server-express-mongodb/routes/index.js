@@ -57,5 +57,20 @@ router.delete('/', function(req, res) {
   res.send('You successfully created a DELETE route!');
 });
 
+//router.delete("/user/:id", function (req, res, next) {
+ // let userId = parseInt(req.params.id);
+//  models.useer
+ //   .destroy({
+ //     where: { user_id: userId }
+  //  })
+  //  .then(result => res.redirect('/user'))
+  //  .catch(err => { 
+   //   res.status(400); 
+  //    res.send("There was a problem deleting the actor. Please make sure you are specifying the correct id."); 
+  //  }
+//);
+//});
+
+
 
 module.exports = router;

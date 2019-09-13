@@ -8,6 +8,9 @@ class Users extends Component {
             users: []
         }
     };
+    
+    
+
 
 componentDidMount(){
 fetch('/api/users')
