@@ -1,0 +1,24 @@
+<div></div>
+<h1>{{title}}</h1>
+
+<p class="txt">Welcome to a list of {{title}}</p>
+<table class="center">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>User ID</th>
+    </tr>
+    {{#each people}}
+    <tr>
+        <td>{{name}}  </td>
+        <td>{{age}} </td>
+        <td>{{userID}} </td>
+    </tr>
+    {{/each}}
+</table>
+</div>
+{{!-- <div class="city">
+{{#each cities}}
+<ul>{{name}}</ul>
+{{/each}}
+</div> --}}
