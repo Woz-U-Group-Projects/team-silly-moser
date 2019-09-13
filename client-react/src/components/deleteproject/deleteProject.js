@@ -5,7 +5,7 @@ export class DeleteProject extends Component {
     render() {
         return (
             <div>
-                <h3>Delete Project Component</h3>
+                <h3>Delete Project</h3>
             </div>
         )
     }
