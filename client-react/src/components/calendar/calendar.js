@@ -58,7 +58,7 @@ class Calendar extends Component {
         <div id="projectCreate">
           <h3 id="createLabel">Create New</h3>
         <textarea ref={this.postTitle}></textarea>
-        <button id="button" class="button" onClick={this.submitPost}>Submit</button>
+        <button id="button" className="button" onClick={this.submitPost}>Submit</button>
         </div>
       </div>
     );

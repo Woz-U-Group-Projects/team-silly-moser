@@ -59,7 +59,7 @@ body {
 #button {
   background-color: lightblue;
   color: white;
-  border: 1px solid black;
+  border: 1px solid lightblue;
   border-radius: 5px;
   margin: 1 auto;
   float: right;
@@ -71,7 +71,7 @@ body {
 .button:hover {background-color: lightblue}
 
 .button:active {
-  background-color: lightblue;
+  background-color: black;
   box-shadow: 0 5px #4A597E;
   transform: translateY(4px);
 }

@@ -26,15 +26,17 @@ li {
         align-items: center;
         text-align: center;
         /* font-size: 2rem; */
+        border: 2px solid black;
+        padding: 1em
     }
 
     .nav a:hover {
-        color:red;
+        color:black;
     }
 
     .registerAction {
         font-size: 1.4em;
-        color: indigo;
+        color: #4A597E;
         text-decoration: underline;
 
     }
