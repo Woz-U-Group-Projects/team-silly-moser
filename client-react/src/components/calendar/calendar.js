@@ -18,8 +18,8 @@ class Calendar extends Component {
     
   onClickDay = date => this.setState({date});
   tileContent = ({date,view}) => {
-    if(view==="month") {
-      let count = this.state.posts.filter(x => new Date(x.date).toDateString() === date.toDateString()).length;
+    if(view=="month") {
+      let count = this.state.posts.filter(x => new Date(x.date).toDateString() == date.toDateString()).length;
       if(count > 0){
         return <>&bull;</>
       }
@@ -52,12 +52,14 @@ class Calendar extends Component {
           onClickDay={this.onClickDay}
           tileContent={this.tileContent}
         />
-        <h3>Date Selected: {this.state.date.toDateString()}</h3>
+        <h3>Date Selected:{this.state.date.toDateString()}</h3>
         {/* {this.state.projects.filter().map()} */}
         </main>
-        <h3>Create new</h3>
-        <textarea ref={this.postTitle}></textarea><br></br>
-        <button onClick={this.submitPost}>submit</button>
+        <div id="projectCreate">
+          <h3 id="createLabel">Create New</h3>
+        <textarea ref={this.postTitle}></textarea>
+        <button id="button" class="button" onClick={this.submitPost}>Submit</button>
+        </div>
       </div>
     );
   }
