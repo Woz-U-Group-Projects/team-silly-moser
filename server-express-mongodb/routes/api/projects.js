@@ -81,7 +81,6 @@ router.post(
 // @route PATCH api/projects/update
 // @desc Update an existing project
 // @access Private
-
 router.patch(
   "/update",
   passport.authenticate("jwt", { session: false }),

@@ -2,8 +2,9 @@
 
 import Project from "./Project";
 
-import React, { Component, useState, useEffect } from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 
@@ -11,7 +12,8 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
-import Navbar from "./components/layout/Navbar";
+// import Navbar from "./components/layout/Navbar";
+
 import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -21,13 +23,12 @@ import Dashboard from "./components/dashboard/Dashboard";
   import "bootstrap/dist/css/bootstrap.min.css";
   import "./App.css";
 
-  import Posts from './components/Posts';
+  // import Posts from './components/Posts';
 import PostForm from './components/Postform';
   import CreateProject from './components/createProject/createProject';
   import DeleteProject from './components/deleteproject/deleteProject';
   import UpdateProject from './components/updateProject/updateProject';
   import ProjectList from './components/projectList/projectList';
-  import CreateUser from "./components/createUser/createUser";
   import Users from './components/Users/users';
   import Calendar from './components/calendar/calendar';
   
@@ -56,7 +57,7 @@ function App() {
   return (
     <Provider store={store}>
     <div className="App"><br></br>
-    <h1>"Schedule Master" - Template</h1>
+    <h1>"Schedule Master"</h1>
     <Project />
 
     <Router>
@@ -75,7 +76,7 @@ function App() {
         {/* <Link to="/Posts" className="navbar-brand">Posts</Link> */}
         <Link to="/PostForm" className="navbar-brand">Posts</Link>
         <Link to="/register" className="navbar-brand">Register</Link>
-        <Link to="/Login" className="navbar-brand">Login</Link>
+        <Link to="/Login" className="navbar-brand">Dashboard</Link>
         
         </nav>
       

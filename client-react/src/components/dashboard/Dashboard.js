@@ -36,6 +36,7 @@ class Dashboard extends Component {
               <h2 className="registerAction">Logout</h2>
             </button>
           </div>
+          
         </div>
       </div>
     );
