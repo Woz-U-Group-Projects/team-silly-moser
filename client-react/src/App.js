@@ -15,7 +15,7 @@ import Project from "./Project";
 function App() {
   return (
     <div className="App"><br></br>
-    <h1>"Schedule Master" - Template</h1>
+    <h1>Schedule Master</h1>
     <Project />
 
     <Router>
