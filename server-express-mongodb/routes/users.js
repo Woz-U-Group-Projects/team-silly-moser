@@ -17,6 +17,25 @@ router.get("/", function(req, res, next) {
   UserModel.find().then(users => res.json(users));
 });
 
+
+router.get(
+  "/api/users",
+  passport.authenticate("jwt", { session: false }),
+  (req, res) => {
+    console.log(req.user.id);
+    UserModel.findAll().then(foundUsers => {
+      if (foundUsers) {
+        console.log(foundUsers);
+        // foundUser is user object
+        // read the UserProjects, filter out the one to be updated, update it, and re-add it
+        res.json(foundUsers.name);
+      } else {
+        res.json({ message: "Error" });
+      }
+    });
+  }
+);
+
 router.post("/", function(req, res, next) {
   let newUser = new UserModel();
   newUser.name = req.body.name;
@@ -31,9 +50,9 @@ router.delete("/:id", function(req, res, next) {
   });
 });
 
-router.get("/api/users", function(req, res, next) {
-  UserModel.findAll().then(users => res.json(users));
-});
+// router.get("/api/users", function(req, res, next) {
+//   UserModel.findAll().then(users => res.json(users));
+// });
 
 
 router.put("/:id", function(req, res, next) {

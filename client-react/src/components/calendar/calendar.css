@@ -1,0 +1,78 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Segoe UI, Tahoma, sans-serif;
+}
+.Sample input,
+.Sample button {
+  font: inherit;
+}
+.Sample header {
+  background-color: #323639;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  color: white;
+}
+.Sample header h1 {
+  font-size: inherit;
+  margin: 0;
+}
+.Sample__container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+}
+.Sample__container > * > * {
+  margin: 10px;
+}
+
+.Sample__container__content {
+  display: flex;
+  max-width: 100%;
+  flex-basis: 25%;
+  flex-direction: column;
+  flex-grow: 100;
+  align-items: normal;
+  padding-top: 1em;
+}
+.Sample__container__content .react-calendar {
+  margin: 0 auto;
+}
+
+.react-calendar {
+  box-shadow: 0 30px 40px 0 rgba(16, 36, 94, 0.2);
+}
+
+#projectCreate {
+  align-content: center;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+#button {
+  background-color: lightblue;
+  color: white;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  margin: 1 auto;
+  float: right;
+  width: 145px;
+  -webkit-transition-duration: 0.4s; 
+  transition-duration: 0.4s;
+}
+
+.button:hover {background-color: lightblue}
+
+.button:active {
+  background-color: black;
+  box-shadow: 0 5px #4A597E;
+  transform: translateY(4px);
+}
+

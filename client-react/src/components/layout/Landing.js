@@ -2,12 +2,17 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './landing.css';
 
+
+
+
+
 class Landing extends Component {
   render() {
     return (
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
-          <div className="col s12 center-align">
+          <div className="col s12 center-align"><br></br>
+          <h1>Welcome to Schedule Master!</h1>
             {/* <h4>
             {" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
@@ -32,6 +37,8 @@ class Landing extends Component {
                 }}
                 className="btn btn-large waves-effect waves-light hoverable blue accent-3"
               >
+
+                
                 Click to Register
               </Link>
             </div>
