@@ -86,7 +86,7 @@ export class CreateProject extends Component {
             </label> */}
           <br></br>
           <br></br>
-          <input type="submit" value="Submit" />
+          <input type="submit" className="btn btn-danger" value="Submit" />
         </form>
 
         {this.state.project_title}
