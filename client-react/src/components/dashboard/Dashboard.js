@@ -18,14 +18,15 @@ class Dashboard extends Component {
       <div>
         <div >
           <div>
+            
             <h2 id="welcome"><br></br>
               <b>Welcome,</b> {user.name.split(" ")[0]}!
 
             </h2>
-            <ProjectList/>
             <button
               style={{
                 width: "150px",
+                marginTop: "-2%",
              
               }}
               onClick={this.onLogoutClick}
@@ -33,6 +34,8 @@ class Dashboard extends Component {
             ><br></br>
               <h2 className="registerAction">Logout</h2>
             </button>
+            <ProjectList/>
+            
             
           </div>
           

@@ -47,7 +47,7 @@ export class ProjectList extends Component {
   render() {
     return (
       <div>
-        <h4>List of Projects:</h4>
+        <h4>My Projects:</h4>
         <ul>
           {this.state.projects.reverse().map(projects => (
             
