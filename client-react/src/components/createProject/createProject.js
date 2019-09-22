@@ -20,12 +20,6 @@ export class CreateProject extends Component {
 
   componentDidMount() {}
 
-  // onChangeUsername(e) {
-  //   this.setState({
-  //     username: e.target.value
-  //   });
-  // }
-
   onChangeProjectName(e) {
     this.setState({
       project_title: e.target.value
@@ -37,11 +31,6 @@ export class CreateProject extends Component {
       project_teamMembers: e.target.value
     });
   }
-  // onProjectCompleted(e) {
-  //   this.setState({
-  //     project_completed: e.target.value
-  //   });
-  // }
 
   onSubmit(e) {
     e.preventDefault();
@@ -62,82 +51,7 @@ export class CreateProject extends Component {
       .then(result => console.log(result));
       alert('project' + ' ' + this.state.project_title + ' ' + 'created');
 
-    //console.log("form sent!");
-    //console.log(`Project title: ${this.state.project_title} `);
-    //alert(`Project ${this.state.project_title} created!`);
-
-    // const thisProject  = {
-    //   name: this.state.name,
-    //   createdBy: this.state.createdBy
-    // }
-
-    // const {
-    //    name
-    //    createdBy: this.state.createdBy
-    // } = this.state;
-
-    // axios.post('http://localhost:3001/projects/')
-    //   .then(response => {
-    //     if (response.data.length > 0) {
-    //       this.setState({
-    //         allProjects: response.data.push(project => project),
-    //         username: response.data[0].username
-    //       })
-    //     }
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   })
-
-    // fetch('/api/projects/', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //      "Authorization":"Bearer " + localStorage.get("jwt")
-    //   },
-    //   body: JSON.stringify({
-    // project inforation
-    //     name: signUpEmail,
-    //     password: signUpPassword,
-    //   }),
-    // }).then(res => res.json())
-    //   .then(json => {
-    //     console.log('json', json);
-    //     if (json.success) {
-    //       this.setState({
-    //         signUpError: json.message,
-    //         isLoading: false,
-    //         signUpEmail: '',
-    //         signUpPassword: '',
-    //       });
-    //     } else {
-    //       this.setState({
-    //         signUpError: json.message,
-    //         isLoading: false,
-    //       });
-    //     }
-    //   });
-
-    // axios.post('http://localhost:3001/projects/')
-    // .then(response => {
-    //   if (response.data.length > 0) {
-    //     this.setState({
-    //       allProjects: response.data.push(project => project),
-    //       username: response.data[0].username
-    //     })
-    //   }
-    // })
-    // .catch((error) => {
-    //   console.log(error);
-    // })
-
-    // this.setState({
-
-    //   project_title: '',
-    //     project_description: '',
-    //     createdBy: '',
-
-    // })
+    
   }
 
   render() {
@@ -146,21 +60,7 @@ export class CreateProject extends Component {
         <h3>Create a Project</h3>
         <form className="ok" onSubmit={this.onSubmit}>
           <br></br>
-          {/* <label><strong>User:</strong> </label>
-          <select ref="userInput"
-              // required
-              className="form-control"
-              value={this.state.username}
-              onChange={this.onChangeUsername}>
-              {
-                this.state.users.map(function(user) {
-                  return <option 
-                    key={user}
-                    value={user}>{user}
-                    </option>;
-                })
-              }
-          </select> */}
+
           <label>
             Name of Project: <br></br>
             <input
@@ -191,7 +91,7 @@ export class CreateProject extends Component {
 
         {this.state.project_title}
         <br></br>
-        {this.state.project_description}
+        {this.state.project_teamMembers}
       </div>
     );
   }

@@ -1,24 +1,56 @@
-/* #root{background-color: lightblue;
-    height: 100%;} */
+
+    
+
+    div {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 
     html, body, #app, #app>div {
+
+        animation-name: example;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+
+        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
         height: 100%;
-        background-color: lightblue;
+        background-color: rgb(24, 164, 202);
       }
 
 ul {
     list-style: none;
     padding: 0px;
-    width: 30%;
+    width: 40%;
     margin: auto;
+    
 }
 
 li {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     line-height: 2rem;
-    border-bottom: 1px dotted #777;
+    padding: 1%;
+    border-bottom: 3px dotted rgb(11, 80, 149);
+   margin: 2%;
     
 }
+
+li a {
+    color: rgb(0, 3, 5);
+    margin: 2%;
+}
+
+
+
+
+li a:hover {
+    color: rgb(131, 26, 44);
+    font-style: oblique;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
 
 .nav 
     {
@@ -27,16 +59,27 @@ li {
         text-align: center;
         /* font-size: 2rem; */
         border: 2px solid black;
-        padding: 1em
+        border-radius: 3em;
+        padding: 1em;
+        margin: 1%;
+        
+    }
+
+
+    .nav a
+    {
+        font-size: 1.3em;
+        font-weight: 500;
+        
     }
 
     .nav a:hover {
-        color:black;
+        color:red;
     }
 
     .registerAction {
         font-size: 1.4em;
-        color: #4A597E;
+        color: blue;
         text-decoration: underline;
 
     }
@@ -52,3 +95,75 @@ li {
         margin-bottom: 20px;
         
     }
+
+    @media only screen
+ 
+and (min-device-width: 375px)
+ 
+and (max-device-width: 667px)
+ 
+and (-webkit-min-device-pixel-ratio: 2)
+ 
+and (orientation: portrait) {
+ 
+}
+ 
+/* Landscape */
+ 
+@media only screen
+ 
+and (min-device-width: 375px)
+ 
+and (max-device-width: 667px)
+ 
+and (-webkit-min-device-pixel-ratio: 2)
+ 
+and (orientation: landscape) {
+ 
+}
+ 
+@keyframes example {
+    
+    /* from {background-color: teal;}
+    to {background-color: purple;}*/
+    0%   {top: 0px; left: 0px; background: rgb(27, 137, 216);}
+    33%  {top: 100px; left: 100px; background: rgb(18, 177, 185);}
+    66%  {top: 100px; left: 0px; background: rgb(169, 71, 255);}
+    /* 75% {top: 100px; left: 0px; background: rgb(255, 82, 174);} */
+    100% {top: 0px; left: 0px; background: rgb(27, 137, 216);}
+  }
+ 
+@media screen
+ 
+and (device-width: 360px)
+ 
+and (device-height: 640px)
+ 
+and (-webkit-device-pixel-ratio: 3)
+ 
+and (orientation: portrait) {
+ 
+}
+ 
+/* Landscape */
+ 
+@media screen
+ 
+and (device-width: 360px)
+ 
+and (device-height: 640px)
+ 
+and (-webkit-device-pixel-ratio: 3)
+ 
+and (orientation: landscape) {
+ 
+}
+
+#welcome {
+    color: black;
+    margin-top: -3%;
+}
+#post {
+    color: black;
+   
+}

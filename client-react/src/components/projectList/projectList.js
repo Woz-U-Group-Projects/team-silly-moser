@@ -2,11 +2,15 @@ import React, { Component } from "react";
 import "./projectList.css";
 import axios from "axios";
 
+
 export class ProjectList extends Component {
   constructor() {
     super();
+
     this.state = {
-      projects: []
+      projects: [],
+      project_title: "",
+    project_teamMembers: "",
     };
   }
 
@@ -21,19 +25,41 @@ export class ProjectList extends Component {
       });
   }
 
+
+
+  deletePost () {
+ alert('delete');
+
+  // deletePost = projectData => dispatch => () {
+    
+  // axios
+  // .patch("http://localhost:3001/projects", projectData)
+  // .then(res =>
+  //   dispatch({
+  //     type: UPDATE_PROJECT,
+  //     payload: res.data
+  //   })
+  // )
+  // .catch(err => console.log(err));
+  // }
+ }
+
   render() {
     return (
       <div>
-        <h3>List of Projects</h3>
+        <h4>List of Projects:</h4>
         <ul>
-          {this.state.projects.map(projects => (
-            <a href="http://www.google.com" target="_blank">
+          {this.state.projects.reverse().map(projects => (
+            
               <li key={projects.id}>
                 {" "}
+                <a href="http://www.google.com" target="_blank">
+                
                 {projects.id} <strong>Name:</strong> {projects.name} <br></br>{" "}
                 <strong>Team Members: </strong> {projects.teamMembers}{" "}
-              </li>
             </a>
+            <button className="btn btn-danger"onClick= {this.deletePost} >X</button>
+            </li>
           ))}
         </ul>
       </div>

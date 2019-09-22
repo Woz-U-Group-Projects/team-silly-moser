@@ -36,7 +36,7 @@ class PostForm extends Component {
   render() {
     return (
       <div>
-        <h1>Create Post</h1>
+        <h2 id="post">Create Post</h2>
         <form onSubmit={this.onSubmit}>
           <div>
             <label>Title: </label>
@@ -59,7 +59,7 @@ class PostForm extends Component {
             />
           </div>
           <br />
-          <button type="submit">Submit</button>
+          <button type="submit" className="btn btn-danger">Submit</button>
         </form>
         <Posts/>
       </div>

@@ -26,6 +26,9 @@ import Dashboard from "./components/dashboard/Dashboard";
   // import Posts from './components/Posts';
 import PostForm from './components/Postform';
   import CreateProject from './components/createProject/createProject';
+  import CreateTodo from "./components/create-todo.component";
+import EditTodo from "./components/edit-todo.component";
+import TodosList from "./components/todos-list.component";
   import DeleteProject from './components/deleteproject/deleteProject';
   import UpdateProject from './components/updateProject/updateProject';
   import ProjectList from './components/projectList/projectList';
@@ -57,18 +60,21 @@ function App() {
   return (
     <Provider store={store}>
     <div className="App"><br></br>
-    <h1>"Schedule Master"</h1>
+    {/* <h1><i>Schedule Master</i></h1> */}
     <Project />
 
     <Router>
 
       <nav className="nav navbar navbar-expand-lg  bg-light">
         <Link to="/" className="navbar-brand">Home</Link>
-        <Link to="projects" className="navbar-brand">List of Projects</Link>
+        {/* <Link to="projects" className="navbar-brand">List of Projects</Link> */}
         <Link to="/create" className="navbar-brand">Create Project</Link>
-        <Link to="/update/:id" className="navbar-brand">Update Project</Link>
-        <Link to="/delete" className="navbar-brand">Delete Project</Link>
+        {/* <Link to="/update/:id" className="navbar-brand">Update Project</Link>
+        <Link to="/delete" className="navbar-brand">Delete Project</Link> */}
         <Link to="/calendar" className="navbar-brand">Calendar</Link>
+        <Link to='/todo' className='navbar-brand'>Todos</Link>
+        <Link to='/createtodo' className='navbar-brand'>Add Todos</Link>
+
 
         {/* <Link to="/user" className="navbar-brand" component={CreateUser}>Create User </Link> */}
 
@@ -82,8 +88,12 @@ function App() {
       
         <Route path='/projects' exact component={ProjectList} />
         <Route path='/create' exact component={CreateProject} />
-        <Route path='/delete' exact component={DeleteProject} />
-        <Route path='/update/' exact component={UpdateProject} />
+        {/* <Route path='/delete' exact component={DeleteProject} />
+        <Route path='/update/' exact component={UpdateProject} /> */}
+
+          <Route path="/todo" exact component={TodosList} />
+          <Route path="/edit/:id" component={EditTodo} />
+          <Route path="/createtodo" component={CreateTodo} />
         <Route path='/calendar' exact component={Calendar} />
         {/* <Route path="/user" exact component={CreateUser} />  */}
         <Route path="/userList" exact component={Users} />
@@ -97,9 +107,6 @@ function App() {
               <PrivateRoute exact path="/dashboard" component={Dashboard} />
             </Switch>
     </Router> <br></br><br></br>
-       {/* <ProjectList/> */}
-       {/* <Users/> */}
-       {/* <PostForm/><Posts/> */}
     </div>
     </Provider>
   );

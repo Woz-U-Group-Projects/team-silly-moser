@@ -8,10 +8,10 @@ class Project extends React.Component {
   }
 
   componentDidMount() {
-    axios
-      .get("http://localhost:3001/projects")
-      .then(response => this.setState({ projects: response.data }));
-  }
+  //   axios
+  //     .get("http://localhost:3001/projects")
+  //     .then(response => this.setState({ projects: response.data }));
+   }
 
   render() {
     return (

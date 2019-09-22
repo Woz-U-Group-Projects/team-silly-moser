@@ -12,7 +12,7 @@ class Landing extends Component {
       <div style={{ height: "75vh" }} className="container valign-wrapper">
         <div className="row">
           <div className="col s12 center-align"><br></br>
-          <h1>Welcome to Schedule Master!</h1>
+          <h2>Welcome to <strong>Schedule Master</strong></h2>
             {/* <h4>
             {" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
@@ -22,7 +22,7 @@ class Landing extends Component {
               Create a (minimal) full-stack app with user authentication via
               passport and JWTs
             </p> */}
-            <br />
+            <br /><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
             <div className="col s6">
               <Link
                 to="/register"
@@ -30,7 +30,7 @@ class Landing extends Component {
                   width: "30%",
                   borderRadius: "3px",
                   letterSpacing: "1px",
-                  color: "indigo",
+                  color: "#CC0033",
                   fontSize: '1.3em',
                   textDecoration: "underline",
                   fontWeight: 'bold'
@@ -49,7 +49,8 @@ class Landing extends Component {
                   width: "30%",
                   borderRadius: "3px",
                   letterSpacing: "1px",
-                  color: "indigo",
+                  color: "blue",
+                
                   fontSize: '1.3em',
                   textDecoration: "underline",
                   fontWeight: 'bold'
