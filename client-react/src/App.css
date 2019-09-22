@@ -167,3 +167,12 @@ and (orientation: landscape) {
     color: black;
    
 }
+
+#schedule {
+    max-width: 25%;
+    margin: auto;
+    margin-top: 2%;
+opacity: 0.8;
+border-radius: 10%;
+
+}

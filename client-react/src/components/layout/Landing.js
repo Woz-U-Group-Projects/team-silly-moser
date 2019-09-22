@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import './landing.css';
-
+const calendar=require('./calendar.png');
 
 
 
@@ -13,6 +13,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align"><br></br>
           <h2>Welcome to <strong>Schedule Master</strong></h2>
+          <img src ={calendar} id="schedule"></img>
             {/* <h4>
             {" "}
               <span style={{ fontFamily: "monospace" }}>MERN</span> stack from
@@ -22,7 +23,7 @@ class Landing extends Component {
               Create a (minimal) full-stack app with user authentication via
               passport and JWTs
             </p> */}
-            <br /><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br><br></br>
+            <br /><br></br>
             <div className="col s6">
               <Link
                 to="/register"

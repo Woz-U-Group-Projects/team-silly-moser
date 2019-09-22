@@ -54,8 +54,13 @@ import TodosList from "./components/todos-list.component";
     }
   }
 
+  export const onLogoutClick = e => {
+    e.preventDefault();
+    this.props.logoutUser();
+  };
 
 function App() {
+
 
   return (
     <Provider store={store}>
@@ -111,5 +116,7 @@ function App() {
     </Provider>
   );
 }
+
+
 
 export default App;                                                                                                                                                       
