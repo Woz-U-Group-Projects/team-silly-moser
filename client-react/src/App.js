@@ -57,7 +57,7 @@ function App() {
   return (
     <Provider store={store}>
     <div className="App"><br></br>
-    <h1>"Schedule Master"</h1>
+    <h1 id="projtitle">"Schedule Master"</h1>
     <Project />
 
     <Router>

@@ -1,54 +1,187 @@
-/* #root{background-color: lightblue;
-    height: 100%;} */
+div {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-    html, body, #app, #app>div {
-        height: 100%;
-        background-color: lightblue;
-      }
+html, body, #app, #app>div {
+
+    animation-name: example;
+animation-duration: 60s;
+animation-iteration-count: infinite;
+
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+monospace;
+    height: 100%;
+    background-color: rgb(24, 164, 202);
+  }
 
 ul {
-    list-style: none;
-    padding: 0px;
-    width: 30%;
-    margin: auto;
+list-style: none;
+padding: 0px;
+width: 40%;
+margin: auto;
+
 }
 
 li {
-    font-size: 1.3rem;
-    line-height: 2rem;
-    border-bottom: 1px dotted #777;
+font-size: 1.4rem;
+line-height: 2rem;
+padding: 1%;
+border-bottom: 3px dotted rgb(11, 80, 149);
+margin: 2%;
+
+}
+
+li a {
+color: rgb(0, 3, 5);
+margin: 2%;
+}
+
+
+
+
+li a:hover {
+color: rgb(131, 26, 44);
+font-style: oblique;
+text-decoration: none;
+font-size: 1.1em;
+}
+
+
+.nav 
+{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* font-size: 2rem; */
+    border: 2px solid black;
+    border-radius: 3em;
+    padding: 1em;
+    margin: 1%;
+    color: #A7D1D7;
     
 }
 
-.nav 
-    {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        /* font-size: 2rem; */
-        border: 2px solid black;
-        padding: 1em
-    }
 
-    .nav a:hover {
-        color:black;
-    }
-
-    .registerAction {
-        font-size: 1.4em;
-        color: #4A597E;
-        text-decoration: underline;
-
-    }
-    .ok {
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
+.nav a
+{
+    color: black;
+    font-size: 1.3em;
+    font-weight: 500;
     
-    .form-control {
-        max-width: 30%;
-        margin: 10px auto;
-        margin-bottom: 20px;
-        
-    }
+}
+
+.nav a:hover {
+    color: #A7D1D7;
+}
+
+.registerAction {
+    font-size: 1.4em;
+    color: blue;
+    text-decoration: underline;
+
+}
+.ok {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.form-control {
+    max-width: 30%;
+    margin: 10px auto;
+    margin-bottom: 20px;
+    
+}
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+
+@media only screen
+
+and (min-device-width: 375px)
+
+and (max-device-width: 667px)
+
+and (-webkit-min-device-pixel-ratio: 2)
+
+and (orientation: landscape) {
+
+}
+
+@keyframes example {
+
+/* from {background-color: teal;}
+to {background-color: purple;}*/
+/*0%   {top: 0px; left: 0px; background: #A7D1D7;}*/
+0%  {top: 100px; left: 100px; background:#7E8EA6;}
+33%  {top: 100px; left: 0px; background: #5A5C79;}
+66% {top: 0px; left: 0px; background: #392D47;}
+100%  {top: 100px; left: 100px; background:#7E8EA6;}
+}
+
+@media screen
+
+and (device-width: 360px)
+
+and (device-height: 640px)
+
+and (-webkit-device-pixel-ratio: 3)
+
+and (orientation: portrait) {
+
+}
+
+/* Landscape */
+
+@media screen
+
+and (device-width: 360px)
+
+and (device-height: 640px)
+
+and (-webkit-device-pixel-ratio: 3)
+
+and (orientation: landscape) {
+
+}
+
+#welcome {
+color: white;
+margin-top: -3%;
+}
+#post {
+color: black;
+
+}
+
+#schedule {
+max-width: 25%;
+margin: auto;
+margin-top: 2%;
+opacity: 0.8;
+border-radius: 10%;
+
+}
+
+#projtitle {
+    color: #FEF1ED;
+    text-transform: uppercase;
+}
+
+#projtitle:hover {
+    text-shadow:-1px 0 #A7D1D7, 0 1px #A7D1D7, 1px 0 #A7D1D7, 0 -1px #A7D1D7;
+
+}

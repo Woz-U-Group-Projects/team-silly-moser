@@ -141,7 +141,7 @@ export class CreateProject extends Component {
 
     render() {
         return (
-            <div><h3>Create a Project</h3>
+            <div id="bg"><h3 id="createprojtxt">Create a Project</h3>
               <form className="ok" onSubmit={this.onSubmit}>
               <br></br>
               {/* <label><strong>User:</strong> </label>
@@ -159,20 +159,20 @@ export class CreateProject extends Component {
                 })
               }
           </select> */}
-            <label>
+            <label id="nametxt">
               Name of Project:  <br></br>
-              <input type="text" value={this.state.project_title} onChange={this.onChangeProjectName} /> 
+              <input id="name" type="text" value={this.state.project_title} onChange={this.onChangeProjectName} /> 
             </label>
             <br></br><br></br>
-            <label>
+            <label id="desctxt">
               Description:  <br></br>
-              <input type="text" value={this.state.project_description} onChange={this.onChangeProjectDescription} />
+              <input id="desc" type="text" value={this.state.project_description} onChange={this.onChangeProjectDescription} />
             </label>
             {/* <label>
              Completed: 
               <input type="radio" value={this.state.project_description} onChange={this.onChangeProjectDescription} />
             </label> */}<br></br><br></br>
-            <input type="submit" value="Submit" />
+            <input id="submitbtn" type="submit" value="Submit" />
           </form>
 
           {this.state.project_title}<br></br>

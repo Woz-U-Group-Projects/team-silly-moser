@@ -1,0 +1,60 @@
+#bg {
+    background-color: #A7D1D7;
+    padding: 1em;
+    border: .25em solid black;
+    border-radius: 2em;
+}
+#createprojtxt {
+    font-size: 10wv;
+    background-color: #FEF1ED;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+#desctxt {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-size: 22px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#desc {
+    padding: .55em;
+    border-radius: 2em;
+    text-align: center;
+}
+
+#desc:focus {
+    background-color: #7E8EA6;
+    color: #FEF1ED;
+}
+
+#submitbtn {
+    background-color: #7E8EA6;
+    color: #FEF1ED;
+    border: 1px solid #5A5C79;
+    border-radius: 5px;
+    margin: 1 auto;
+    width: 145px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s;
+    text-transform: uppercase;
+    font-variant: small-caps;
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#submitbtn:hover {
+    background-color: #392D47;
+    text-shadow: -1px 0 #5A5C79, 0 1px #5A5C79, 1px 0 #5A5C79, 0 -1px #5A5C79;
+};
+
+#submitbtn:active {
+    background-color: black;
+  box-shadow: 0 5px #4A597E;
+  transform: translateY(4px);
+}

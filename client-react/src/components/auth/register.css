@@ -1,0 +1,84 @@
+#registerfull {
+    background-color: #A7D1D7;
+    padding: 1em;
+    border: .25em solid black;
+    border-radius: 2em;
+}
+
+#registerheader {
+    font-size: 10wv;
+    background-color: #FEF1ED;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+#alreadyacct {
+    font-style: italic;
+}
+
+#login {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#nametxt {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-size: 22px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+#name {
+    padding: .55em;
+    border-radius: 2em;
+    text-align: center;
+}
+
+#name:focus {
+    background-color: #7E8EA6;
+    color: #FEF1ED;
+}
+
+#emaillabel {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-size: 22px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#passwordlabel {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-size: 22px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#passwordconfirm {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-size: 22px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#password2 {
+    padding: .55em;
+    border-radius: 2em;
+    text-align: center;
+}
+
+#password2:focus {
+    background-color: #7E8EA6;
+    color: #FEF1ED;
+}

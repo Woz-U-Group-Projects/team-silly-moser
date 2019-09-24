@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
 import classnames from "classnames";
+import "./register.css";
 
 
 class Register extends Component {
@@ -54,7 +55,7 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
+      <div id="registerfull" className="container">
         <div className="row">
           <div className="col s8 offset-s2">
             {/* <Link to="/" className="btn-flat waves-effect">
@@ -62,16 +63,16 @@ class Register extends Component {
               home
             </Link> */}
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
+              <h4 id="registerheader">
                 <b>Register</b> below
               </h4>
-              <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
+              <p className="grey-text text-darken-1" id="alreadyacct">
+                Already have an account? <Link id="login" to="/login">Log in!</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
               <div className="input-field col s12">
-              <label htmlFor="name">Name</label><br></br>
+              <label id="nametxt" htmlFor="name">Name</label><br></br>
                 <input
                   onChange={this.onChange}
                   value={this.state.name}
@@ -86,7 +87,7 @@ class Register extends Component {
                 <span className="red-text">{errors.name}</span>
               </div>
               <div className="input-field col s12">
-              <label htmlFor="email">Email</label><br></br>
+              <label id="emaillabel" htmlFor="email">Email</label><br></br>
                 <input
                   onChange={this.onChange}
                   value={this.state.email}
@@ -101,7 +102,7 @@ class Register extends Component {
               </div>
 
               <div className="input-field col s12">
-              <label htmlFor="password">Password</label><br></br>
+              <label id="passwordlabel" htmlFor="password">Password</label><br></br>
                 <input
                   onChange={this.onChange}
                   value={this.state.password}
@@ -116,7 +117,7 @@ class Register extends Component {
               </div>
 
               <div className="input-field col s12">
-              <label htmlFor="password2">Confirm Password</label><br></br>
+              <label id="passwordconfirm" htmlFor="password2">Confirm Password</label><br></br>
                 <input
                   onChange={this.onChange}
                   value={this.state.password2}

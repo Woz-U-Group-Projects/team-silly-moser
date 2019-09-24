@@ -1,0 +1,66 @@
+#wooby {
+    background-color: #A7D1D7;
+    padding: 1em;
+    border: .25em solid black;
+    border-radius: 2em;
+}
+
+#loginheader {
+    font-size: 10wv;
+    background-color: #FEF1ED;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 5px;
+}
+#noacct {
+    font-style: italic;
+}
+
+#register {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-style: italic;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+#emailtxt {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-size: 22px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#email {
+    padding: .55em;
+    border-radius: 2em;
+    text-align: center;
+}
+
+#email:focus {
+    background-color: #7E8EA6;
+    color: whi#FEF1EDte;
+}
+
+#passwordtxt {
+    text-transform: uppercase;
+    color: #000000;
+    text-shadow: -1px 0 #FEF1ED, 0 1px #FEF1ED, 1px 0 #FEF1ED, 0 -1px #FEF1ED;
+    font-size: 22px;
+    font-weight: bold;
+    font-variant: small-caps;
+}
+
+#password {
+    padding: .55em;
+    border-radius: 2em;
+    text-align: center;
+}
+
+#password:focus {
+    background-color: #7E8EA6;
+    color: #FEF1ED;
+}

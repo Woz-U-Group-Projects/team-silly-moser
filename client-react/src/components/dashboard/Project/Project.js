@@ -188,8 +188,8 @@ class Project extends Component {
                 Add task
               </button>
               <div className="projects-column-headers">
-                <p>Assignee</p>
-                <p>Due</p>
+                <p>Assigned:</p>
+                <p>Due:</p>
               </div>
             </div>
             <div className="project-tasks">{tasksList}</div>
