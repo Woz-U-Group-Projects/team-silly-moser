@@ -3,7 +3,7 @@ import WoomyCalendar from 'react-calendar';
 import ReactDOM from 'react-dom';
 import "./calendar.css";
 import axios from 'axios';
-//import ProjectList from '../components/projectList';
+//import ProjectList from '../components/projectList/projectList';
 
 class Calendar extends Component {
   constructor(props){
