@@ -49,7 +49,7 @@ export class CreateProject extends Component {
         }
       )
       .then(result => console.log(result));
-      alert('project' + ' ' + this.state.project_title + ' ' + 'created');
+      alert('Project ' + this.state.project_title + ' created!');
 
     
   }

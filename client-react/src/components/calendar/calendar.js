@@ -1,6 +1,6 @@
-import React, { Component, useState } from 'react';
+import React, { Component} from 'react';
 import WoomyCalendar from 'react-calendar';
-import ReactDOM from 'react-dom';
+// import ReactDOM from 'react-dom';
 import "./calendar.css";
 import axios from 'axios';
 

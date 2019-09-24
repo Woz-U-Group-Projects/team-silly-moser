@@ -27,6 +27,18 @@ ul {
     
 }
 
+.editTodo {
+    font-weight: 600;
+    color: rgb(14, 55, 97);
+}
+
+
+.editTodo:hover {
+    font-weight: 600;
+    color: rgb(131, 26, 44);
+    text-decoration: none;
+}
+
 li {
     font-size: 1.4rem;
     line-height: 2rem;
@@ -96,6 +108,15 @@ li a:hover {
         
     }
 
+    @keyframes example {
+    
+   
+        0%   {top: 0px; left: 0px; background: rgb(27, 137, 216);}
+        33%  {top: 100px; left: 100px; background: rgb(18, 177, 185);}
+        66%  {top: 100px; left: 0px; background: rgb(169, 71, 255);}
+        100% {top: 0px; left: 0px; background: rgb(27, 137, 216);}
+      }
+
     @media only screen
  
 and (min-device-width: 375px)
@@ -122,16 +143,6 @@ and (orientation: landscape) {
  
 }
  
-@keyframes example {
-    
-    /* from {background-color: teal;}
-    to {background-color: purple;}*/
-    0%   {top: 0px; left: 0px; background: rgb(27, 137, 216);}
-    33%  {top: 100px; left: 100px; background: rgb(18, 177, 185);}
-    66%  {top: 100px; left: 0px; background: rgb(169, 71, 255);}
-    /* 75% {top: 100px; left: 0px; background: rgb(255, 82, 174);} */
-    100% {top: 0px; left: 0px; background: rgb(27, 137, 216);}
-  }
  
 @media screen
  

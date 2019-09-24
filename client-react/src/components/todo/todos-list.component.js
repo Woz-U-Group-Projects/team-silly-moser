@@ -8,7 +8,7 @@ const Todo = props => (
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
-            <Link to={"/edit/"+props.todo._id}>Edit</Link>
+            <Link to={"/edit/"+props.todo._id} className="editTodo">Edit</Link>
         </td>
     </tr>
 )
@@ -53,8 +53,8 @@ export default class TodosList extends Component {
                 <table className="table table-striped" style={{ marginTop: 20 }}>
                     <thead>
                         <tr>
+                            <th>Name</th>
                             <th>Description</th>
-                            <th>Responsible</th>
                             <th>Priority</th>
                             <th>Actions</th>
                         </tr>

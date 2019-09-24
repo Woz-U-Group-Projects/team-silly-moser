@@ -30,18 +30,7 @@ export class ProjectList extends Component {
   deletePost () {
  alert('delete');
 
-  // deletePost = projectData => dispatch => () {
-    
-  // axios
-  // .patch("http://localhost:3001/projects", projectData)
-  // .then(res =>
-  //   dispatch({
-  //     type: UPDATE_PROJECT,
-  //     payload: res.data
-  //   })
-  // )
-  // .catch(err => console.log(err));
-  // }
+
  }
 
   render() {
@@ -53,7 +42,7 @@ export class ProjectList extends Component {
             
               <li key={projects.id}>
                 {" "}
-                <a href="http://www.google.com" target="_blank">
+                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">
                 
                 {projects.id} <strong>Name:</strong> {projects.name} <br></br>{" "}
                 <strong>Team Members: </strong> {projects.teamMembers}{" "}

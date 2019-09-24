@@ -1,8 +1,8 @@
 
 
-import Project from "./Project";
+// import Project from "./Project";
 
-import React, { Component } from "react";
+import React from "react";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
 
 import jwt_decode from "jwt-decode";
@@ -24,13 +24,11 @@ import Dashboard from "./components/dashboard/Dashboard";
   import "./App.css";
 
   // import Posts from './components/Posts';
-import PostForm from './components/Postform';
+import PostForm from './components/posts/Postform';
   import CreateProject from './components/createProject/createProject';
-  import CreateTodo from "./components/create-todo.component";
-import EditTodo from "./components/edit-todo.component";
-import TodosList from "./components/todos-list.component";
-  import DeleteProject from './components/deleteproject/deleteProject';
-  import UpdateProject from './components/updateProject/updateProject';
+  import CreateTodo from "./components/todo/create-todo.component";
+import EditTodo from "./components//todo/edit-todo.component";
+import TodosList from "./components/todo/todos-list.component";
   import ProjectList from './components/projectList/projectList';
   import Users from './components/Users/users';
   import Calendar from './components/calendar/calendar';
@@ -66,7 +64,7 @@ function App() {
     <Provider store={store}>
     <div className="App"><br></br>
     {/* <h1><i>Schedule Master</i></h1> */}
-    <Project />
+    {/* <Project /> */}
 
     <Router>
 

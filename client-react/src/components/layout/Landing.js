@@ -13,7 +13,7 @@ class Landing extends Component {
         <div className="row">
           <div className="col s12 center-align"><br></br>
           <h2>Welcome to <strong><i>Schedule Master</i></strong></h2>
-          <img src ={calendar} id="schedule"></img>
+          <img src ={calendar} id="schedule" alt="calendar"></img>
             
             <br /><br></br>
             <div className="col s6">
